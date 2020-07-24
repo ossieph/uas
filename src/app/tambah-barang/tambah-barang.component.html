@@ -1,0 +1,36 @@
+ <h3 mat-dialog-title>Tambah Barang Baru</h3>
+<div mat-dialog-content>      
+   <mat-form-field style="width: 100%;">
+        <mat-label>Nama</mat-label>
+        <input matInput  [(ngModel)]="data.nama">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Tanggal</mat-label>
+        <input matInput [(ngModel)]="data.tanggal">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Sisa Barang</mat-label>
+        <input matInput [(ngModel)]="data.sisa_barang">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Barang Masuk</mat-label>
+        <input matInput [(ngModel)]="data.barang_masuk">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Barang Keluar</mat-label>
+        <input matInput [(ngModel)]="data.barang_keluar">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga Beli</mat-label>
+        <input matInput [(ngModel)]="data.harga_beli">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga Jual</mat-label>
+        <input matInput [(ngModel)]="data.harga_jual">
+    </mat-form-field>
+</div>
+<mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Batal</button>    
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan(data)">Simpan</button>
+  </mat-dialog-actions>
